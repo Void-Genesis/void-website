@@ -1,25 +1,23 @@
-import Header from "@/components/layout/Header";
-import PrimaryButton from "@/components/ui/PrimaryButton";
-import VoidCard from "@/components/ui/VoidCard";
+import HeroSection from "@/components/homepage/HeroSection";
+import MissionSection from "@/components/layout/MissionSection";
+import SolutionsSection from "@/components/layout/SolutionsSection";
+import CaseStudySection from "@/components/homepage/CaseStudySection";
+import TeamSection from "@/components/homepage/TeamSection";
+import CallToActionSection from "@/components/homepage/CallToActionSection";
+import TestimonialSection from "@/components/homepage/TestimonialSection";
 
 export default function Home() {
-  return (<>
-    <Header />
+  return (
+    <>
 
-    <div className="flex flex-col px-4 pt-[46px]">
+      <HeroSection />
+      <MissionSection />
+      <SolutionsSection />
+      <CaseStudySection />
+      <TestimonialSection />
+      <TeamSection />
+      <CallToActionSection />
 
-      <h1>Tecendo um futuro onde a tecnologia serve à humanidade.</h1>
-
-      <h2 className="pt-6">Potencialize sua empresa com soluções profissionais nas áreas da tecnologia, marketing e vendas.</h2>
-
-      <div className="mt-11">
-        <PrimaryButton />
-      </div>
-
-      <div className="flex bg-red-500 p-2 border">
-        <VoidCard />
-      </div>
-
-    </div>
-  </>)
+    </>
+  )
 }

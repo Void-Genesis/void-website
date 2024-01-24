@@ -1,12 +1,13 @@
-export default function PrimaryButton() {
+
+
+export default function PrimaryButton({ text }: { text: string }) {
     return (
-        <div className="flex items-center justify-center gap-2 bg-void-blue rounded-sm py-5 px-8">
-            <div className="text-sm font-semibold">
-                Quero potencializar meu negócio
+        <div className="w-full flex items-center justify-center bg-void-blue rounded-[3px] py-5 px-8">
+            <div className="text-sm font-semibold pr-2">
+                {text}
             </div>
-            <div className="bg-black rounded-md items-center justify-center p-2">
-                <img className="" src="/icon-arrow-top-right.svg" alt="" />
-            </div>
+
+            <img className="bg-red-500 rounded-md items-center justify-center h-6" src="/icon-button-arrow.svg" alt="Void Genesis" />
         </div>
     )
 }

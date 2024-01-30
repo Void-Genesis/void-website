@@ -37,3 +37,29 @@ p {
   line-height: 120%;
   letter-spacing: 0.16px;
 }
+
+nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.2s;
+
+  transform: translate(var(--mouse-x, 0), var(--mouse-y, 0));
+  opacity: var(--hover, 0);
+  z-index: -100;
+}
+
+.bg-custom-radial-shadow {
+  background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.hover-light-effect:hover {
+  box-shadow: 0 0 32px -5px rgba(246, 128, 38, 0.3);
+}

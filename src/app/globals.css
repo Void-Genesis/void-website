@@ -2,16 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Sora:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Sora:wght@800&display=swap");
 
 body {
-  color: theme('colors.void-white');
-  background: theme('colors.void-primary-black');
+  color: theme("colors.void-white");
+  background: theme("colors.void-primary-black");
 }
 
 h1 {
-  color: theme('colors.void-white');
-  font-family: 'Sora', sans-serif;
+  color: theme("colors.void-white");
+  font-family: "Sora", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 800;
@@ -20,8 +20,8 @@ h1 {
 }
 
 h2 {
-  color: theme('colors.void-white-300');
-  font-family: 'Heebo', sans-serif;
+  color: theme("colors.void-white-300");
+  font-family: "Heebo", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -30,8 +30,8 @@ h2 {
 }
 
 p {
-  color: theme('colors.void-white-300');
-  font-family: 'Heebo', sans-serif;
+  color: theme("colors.void-white-300");
+  font-family: "Heebo", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
@@ -39,17 +39,23 @@ p {
 }
 
 nav::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100px;
   height: 100%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
   border-radius: 50%;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.3s, transform 0.2s;
+  transition:
+    opacity 0.3s,
+    transform 0.2s;
 
   transform: translate(var(--mouse-x, 0), var(--mouse-y, 0));
   opacity: var(--hover, 0);
@@ -57,9 +63,87 @@ nav::before {
 }
 
 .bg-custom-radial-shadow {
-  background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
 }
 
 .hover-light-effect:hover {
   box-shadow: 0 0 32px -5px rgba(246, 128, 38, 0.3);
+}
+
+/* Estiliza toda a barra de rolagem */
+::-webkit-scrollbar {
+  width: 8px;
+  cursor: pointer;
+}
+
+/* Estiliza o fundo da barra de rolagem (a trilha) */
+::-webkit-scrollbar-track {
+  background: #0c0c0f;
+  cursor: pointer;
+}
+
+/* Estiliza a alça da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background: #202229;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estiliza o estado de hover da alça da barra de rolagem */
+::-webkit-scrollbar-thumb:hover {
+  background: #0e45eb;
+  cursor: pointer;
+}
+
+/* Para o Firefox */
+* {
+  scrollbar-width: 8px;
+  scrollbar-color: #202229 #0c0c0f;
+}
+
+.link-light-effect {
+  position: relative;
+  display: inline-block;
+  /* Garante que o pseudo-elemento se alinhe corretamente. */
+  overflow: hidden;
+  /* Mantém o pseudo-elemento dentro dos limites do link. */
+}
+
+.link-light-effect::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(19, 20, 24, 0.5) 70%,
+    rgba(19, 20, 24, 0.88) 100%
+  );
+  /* Gradiente radial que começa transparente e vai até rgba(19,20,24,0.88) */
+  /* Cor branca com opacidade. */
+  border-radius: 4px;
+  transition:
+    width 0.2s ease-out,
+    height 0.3s ease-out,
+    top 0.3s ease-out,
+    left 0.3s ease-out;
+  z-index: -50;
+}
+
+.link-light-effect:hover::after {
+  width: 200%;
+  /* Ajuste conforme necessário para o tamanho do efeito desejado. */
+  height: 200%;
+  /* Ajuste conforme necessário para o tamanho do efeito desejado. */
+  top: -50%;
+  /* Posiciona corretamente o pseudo-elemento. */
+  left: -50%;
+  /* Posiciona corretamente o pseudo-elemento. */
 }

@@ -1,26 +1,38 @@
 "use client";
-
 import React, { useState } from "react";
-export default function VoidCard() {
-  const [isBlue, setIsBlue] = useState(false);
 
-  const toggleImage = () => {
-    setIsBlue(!isBlue);
-  };
+export default function VoidCard() {
+  const [hover, setHover] = useState(false);
 
   return (
     <div
-      className="relative z-0 p-20 lg:pl-16 lg:pr-24 lg:h-full lg:ml-20 border-[0.471px] rounded-[3.47px] border-void-grey-100 bg-gradient-to-br from-void-custom-dark-200 to-darkblue-200"
-      onClick={toggleImage}
+      className="relative group cursor-pointer"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
     >
-      <div className="absolute -z-20 top-0 right-[8px] -left-2 bottom-0 p-20 border-[0.471px] border-void-grey-300 rounded-[3.47px] bg-gradient-to-br from-void-custom-dark-300 to-void-custom-dark-400" />
-      <div className="absolute -z-10 top-0 right-[18px] -left-3 bottom-0 p-20 border-[0.471px] border-[#2E303B] rounded-[3.47px] bg-gradient-to-br from-void-custom-dark-100 to-void-custom-dark-200" />
-
       <img
-        className={`lg:w-full lg:h-full transition-transform duration-500 ${
-          isBlue ? "rotate-180" : "rotate-0"
-        }`}
-        src={isBlue ? "/logo-void-blue.svg" : "/logo-void-orange.svg"}
+        className={`relative left-0 top-0 z-30 transition-opacity duration-700 ${hover ? "opacity-0" : "opacity-100"}`}
+        src="/image-void-card-logo.png"
+        alt="Void Genesis"
+      />
+      <img
+        className={`absolute left-0 top-0 z-30 transition-opacity duration-700 ${hover ? "opacity-100" : "opacity-0"}`}
+        src="/image-void-card-middle.png"
+        alt="Void Genesis"
+      />
+      <img
+        className="absolute -right-2 top-0 z-20"
+        src="/image-void-card-middle.png"
+        alt="Void Genesis"
+      />
+      <img
+        className="absolute -right-0 top-0 z-20"
+        src="/image-void-card-middle-min.png"
+        alt="Void Genesis"
+      />
+      <img
+        className="absolute -right-4 top-0 z-10"
+        src="/image-void-card-back.png"
         alt="Void Genesis"
       />
     </div>

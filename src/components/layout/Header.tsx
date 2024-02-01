@@ -23,7 +23,7 @@ export default function Header() {
           </Link>
           <Link
             href="/"
-            className="link-light-effect p-2 rounded-sm hover:text-void-white"
+            className="link-light-effect p-2 rounded-sm hover:text-void-white lg:p-2"
           >
             Sobre nós
           </Link>

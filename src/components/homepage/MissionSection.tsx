@@ -1,10 +1,14 @@
 export default function MissionSection() {
   return (
-    <div className="flex flex-col px-4 pt-[46px] pb-[132px] lg:px-[160px] lg:py-[132px]">
+    <div className="flex flex-col px-4 pt-[46px] pb-[132px] lg:px-[160px] lg:py-[132px] lg:pb-[264px]">
       <div className="p-2 pt-11 pb-8 lg:grid lg:grid-cols-12 lg:p-0 lg:justify-center lg:items-start lg:pl-4">
-        <div className="lg:col-start-1 lg:col-end-7 lg:mt-14">
-          <h1 className="mb-6 lg:text-[72px] lg:tracking-[1px] lg:leading-[120%] lg:mr-48">
-            Conheça a Void Genesis
+        <div className="lg:col-start-1 lg:col-end-7 lg:mt-0">
+          <h1 className="mb-6 lg:text-[72px] lg:tracking-[1px] lg:leading-[120%]">
+            Conheça a{" "}
+            <span>
+              <br />
+              Void Genesis
+            </span>
           </h1>
 
           <div className="flex flex-col gap-[52px] lg:font-normal text-void-white-300 lg:text-xl text-base">
@@ -32,11 +36,11 @@ export default function MissionSection() {
           <img
             className="z-0 w-[258px] lg:h-full lg:w-full"
             src="/void-eclipse.svg"
-            alt=""
+            alt="Void Genesis"
           />
         </div>
 
-        <div className="lg:col-start-1 lg:col-end-13 lg:pt-[264px]">
+        <div className="lg:col-start-1 lg:col-end-13 lg:pt-16">
           <h1 className="mt-9 text-2xl lg:text-[72px] lg:leading-[120%] lg:tracking-[1px] lg:col-start-1 lg:col-end-3">
             Empresas que receberam nossos serviços
           </h1>

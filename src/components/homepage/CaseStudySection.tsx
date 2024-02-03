@@ -90,7 +90,7 @@ export default function CaseStudySection() {
             </div>
 
             <div className="lg:relative lg:bottom-0">
-              <p className="mt-12 font-normal font-heebo text-base text-void-white-300 mb-7 lg:text-right lg:pl-40 lg:text-lg lg:mt-0">
+              <p className="mt-12 font-normal font-heebo text-base text-void-white-300 mb-7 lg:text-left lg:pl-0 lg:text-xl lg:font-black lg:mt-0">
                 Com a Void Genesis, cada projeto é uma nova história de sucesso!
               </p>
 

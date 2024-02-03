@@ -1,14 +1,19 @@
+/* Tailwind CSS Imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Font Imports */
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Sora:wght@800&display=swap");
 
+/* Base Styles */
 body {
   color: theme("colors.void-white");
   background: theme("colors.void-primary-black");
 }
 
+/* Headings */
+/* Style for H1 */
 h1 {
   color: theme("colors.void-white");
   font-family: "Sora", sans-serif;
@@ -19,6 +24,7 @@ h1 {
   letter-spacing: 1px;
 }
 
+/* Style for H2 */
 h2 {
   color: theme("colors.void-white-300");
   font-family: "Heebo", sans-serif;
@@ -29,6 +35,7 @@ h2 {
   letter-spacing: 0.16px;
 }
 
+/* Paragraphs */
 p {
   color: theme("colors.void-white-300");
   font-family: "Heebo", sans-serif;
@@ -38,6 +45,7 @@ p {
   letter-spacing: 0.16px;
 }
 
+/* Navigation Styles */
 nav::before {
   content: "";
   position: absolute;
@@ -56,12 +64,12 @@ nav::before {
   transition:
     opacity 0.3s,
     transform 0.2s;
-
   transform: translate(var(--mouse-x, 0), var(--mouse-y, 0));
   opacity: var(--hover, 0);
   z-index: -100;
 }
 
+/* Custom Backgrounds */
 .bg-custom-radial-shadow {
   background: radial-gradient(
     circle at center,
@@ -70,80 +78,128 @@ nav::before {
   );
 }
 
+/* Hover Effects */
 .hover-light-effect:hover {
-  box-shadow: 0 0 32px -5px rgba(246, 128, 38, 0.3);
+  box-shadow: 0px 0px 12px -8px rgba(246, 128, 38, 1);
 }
 
-/* Estiliza toda a barra de rolagem */
+/* Scrollbar Styles */
+/* General scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
   cursor: pointer;
 }
 
-/* Estiliza o fundo da barra de rolagem (a trilha) */
+/* Scrollbar track */
 ::-webkit-scrollbar-track {
   background: #0c0c0f;
   cursor: pointer;
 }
 
-/* Estiliza a alça da barra de rolagem */
+/* Scrollbar handle */
 ::-webkit-scrollbar-thumb {
   background: #202229;
   border-radius: 4px;
   cursor: pointer;
 }
 
-/* Estiliza o estado de hover da alça da barra de rolagem */
+/* Scrollbar handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #0e45eb;
   cursor: pointer;
 }
 
-/* Para o Firefox */
+/* Firefox scrollbar styling */
 * {
   scrollbar-width: 8px;
   scrollbar-color: #202229 #0c0c0f;
 }
 
-.link-light-effect {
-  position: relative;
-  display: inline-block;
-  /* Garante que o pseudo-elemento se alinhe corretamente. */
-  overflow: hidden;
-  /* Mantém o pseudo-elemento dentro dos limites do link. */
-}
-
-.link-light-effect::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.03) 0%,
-    rgba(19, 20, 24, 0.5) 70%,
-    rgba(19, 20, 24, 0.88) 100%
-  );
-  /* Gradiente radial que começa transparente e vai até rgba(19,20,24,0.88) */
-  /* Cor branca com opacidade. */
-  border-radius: 4px;
+/* Transitions */
+.transition-border {
   transition:
-    width 0.2s ease-out,
-    height 0.3s ease-out,
-    top 0.3s ease-out,
-    left 0.3s ease-out;
-  z-index: -50;
+    border-bottom 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 }
 
+/* Link Effects */
+/* Base setup for link light effect (currently commented out) */
+.link-light-effect {
+  /* Initial setup commented */
+}
+
+/* Hover effect for links */
 .link-light-effect:hover::after {
   width: 200%;
-  /* Ajuste conforme necessário para o tamanho do efeito desejado. */
   height: 200%;
-  /* Ajuste conforme necessário para o tamanho do efeito desejado. */
   top: -50%;
-  /* Posiciona corretamente o pseudo-elemento. */
   left: -50%;
-  /* Posiciona corretamente o pseudo-elemento. */
+}
+
+/* Scrollbar Customization for No Horizontal Scroll */
+.no-horizontal-scroll::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Blink browsers */
+}
+
+.no-horizontal-scroll {
+  -ms-overflow-style: none;
+  /* IE 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Animation Tests */
+.test-animation-css {
+  height: 80px;
+  transition: height 0.3s ease-in-out;
+}
+
+.group:hover .test-animation-css {
+  height: 200px;
+}
+
+/* SVG Button Hover Effects */
+#primary-button:hover #background {
+  fill: #f0f4ff;
+}
+
+#primary-button {
+  transition: transform 750ms;
+}
+
+#primary-button:hover {
+  transition: transform 300ms;
+}
+
+#primary-button:hover #down,
+#primary-button:hover #up {
+  transform: translate(21px, -21px);
+}
+
+#primary-button:hover #down {
+  stroke: #0c0c0f;
+  transition: transform 0.5s ease;
+}
+
+#primary-button:hover #up {
+  stroke: #f0f4ff;
+  transition: transform 0.5s ease;
+}
+
+/* SVG Styles */
+svg #background {
+  fill: #0c0c0f;
+  transition: fill 0.5s ease-in-out;
+}
+
+svg #down,
+svg #up {
+  stroke: transparent;
+}
+
+svg #up {
+  stroke: #f0f4ff;
+  transform: translate(-21px, 21px);
+  z-index: 50;
 }

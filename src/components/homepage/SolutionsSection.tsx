@@ -3,68 +3,73 @@ import PrimaryButton from "../ui/PrimaryButton";
 
 export default function SolutionsSection() {
   return (
-    <>
-      <div className="border-t border-void-grey-800 pt-12 pb-[132px] bg-void-grey-200">
-        <div className="lg:flex lg:flex-col lg:py-44 lg:px-40">
-          <div className="lg:flex lg:flex-row lg:gap-20">
-            <div className="lg:w-1/2">
-              <h1 className="lg:font-sora lg:text-[42px] lg:font-extrabold lg:leading-[120%] lg:tracking-[1px]">
-                Soluções Sob Medida para Seu Sucesso
-              </h1>
-              <p className="mt-6">
-                Aqui na nossa empresa, combinamos a magia do design com a
-                eficácia da tecnologia. Nosso objetivo? Levar sua marca para o
-                próximo nível com serviços que vão desde identidades visuais
-                únicas até estratégias online que realmente funcionam!
-              </p>
-            </div>
+    <div className="border-t border-void-grey-800 bg-void-grey-200 pt-12 pb-[132px] lg:h-full lg:px-40 lg:py-32">
+      <div className="flex flex-col lg:grid lg:grid-cols-12 px-40 py-44 lg:px-0 lg:py-0">
+        <div className="flex flex-col gap-20 lg:flex-row lg:col-start-1 lg:col-end-7">
+          <div>
+            <h1 className="text-[42px] font-extrabold leading-[120%] tracking-[1px] font-sora">
+              Soluções Sob Medida para Seu Sucesso
+            </h1>
+            <p className="mt-6 lg:text-lg">
+              Aqui na nossa empresa, combinamos a magia do design com a eficácia
+              da tecnologia. Nosso objetivo? Levar sua marca para o próximo
+              nível com serviços que vão desde identidades visuais únicas até
+              estratégias online que realmente funcionam!
+            </p>
+          </div>
+        </div>
 
-            <div className="lg:w-1/2 relative">
-              <img
-                className="h-8 hidden lg:absolute lg:flex lg:right-0 lg:top-0"
-                src="/logo-void-white.svg"
-                alt="Void Genesis"
-              />
+        <div className="relative w-full lg:col-start-8 lg:col-end-13">
+          <img
+            src="/logo-void-white.svg"
+            alt="Void Genesis"
+            className="hidden absolute right-0 top-0 h-8 lg:flex"
+          />
+          <div className="absolute bottom-0 left-0 right-0">
+            <PrimaryButton text="Falar com consultor no WhatsApp" />
+          </div>
+        </div>
 
-              <div className="lg:absolute lg:bottom-0 lg:right-0 lg:left-0">
-                <PrimaryButton text="Falar com consultor no WhatsApp" />
-              </div>
-            </div>
+        <div className="mt-11 lg:col-start-1 lg:col-end-13">
+          <div
+            id="cards"
+            className="flex flex-row gap-x-4 mb-6 lg:overflow-x-auto lg:flex-nowrap no-horizontal-scroll lg:overflow-y-hidden"
+          >
+            <CarrouselCard />
+            <CarrouselCard />
+            <CarrouselCard />
+            <CarrouselCard />
+            <CarrouselCard />
+            <CarrouselCard />
+            <CarrouselCard />
+            <CarrouselCard />
+            <CarrouselCard />
+            <CarrouselCard />
+            <CarrouselCard />
+            <CarrouselCard />
+            <CarrouselCard />
+            <CarrouselCard />
+            <CarrouselCard />
+            <CarrouselCard />
           </div>
 
-          <div className="lg:mt-11">
-            <div id="cards" className="flex flex-row gap-x-4 mb-6">
-              <CarrouselCard />
-              <CarrouselCard />
-              <CarrouselCard />
-              <CarrouselCard />
-              <CarrouselCard />
-              <CarrouselCard />
-              <CarrouselCard />
-            </div>
-
-            <div
-              id="buttons"
-              className="flex flex-row justify-center items-center gap-12"
-            >
-              <div>
-                <img
-                  className="rotate-180 w-8 cursor-pointer"
-                  src="/icon-chevron-r.svg"
-                  alt="Void Genesis"
-                />
-              </div>
-              <div>
-                <img
-                  className="w-8 cursor-pointer"
-                  src="/icon-chevron-r.svg"
-                  alt="Void Genesis"
-                />
-              </div>
-            </div>
+          <div
+            id="buttons"
+            className="flex flex-row items-center justify-center gap-12"
+          >
+            <img
+              src="/icon-chevron-r.svg"
+              alt="Void Genesis"
+              className="w-8 cursor-pointer rotate-180"
+            />
+            <img
+              src="/icon-chevron-r.svg"
+              alt="Void Genesis"
+              className="w-8 cursor-pointer"
+            />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

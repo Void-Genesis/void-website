@@ -11,6 +11,7 @@ const config: Config = {
       backgroundImage: {
         "custom-radial":
           "radial-gradient(70% 50% at 50% 50%, #1A1A1F 0%, #0C0C0F 100%)",
+        eclipse: "/void-eclipse.svg",
       },
       colors: {
         "void-primary-black": "#0C0C0F",

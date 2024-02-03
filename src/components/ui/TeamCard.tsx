@@ -12,7 +12,7 @@ export default function TeamCard({
   altText,
 }: TeamCardProps) {
   return (
-    <div className="px-5 pt-5 pb-8 rounded border border-void-grey-900 ">
+    <div className="px-5 pt-5 pb-8 rounded border border-void-grey-900 bg-void-grey-200">
       <div className="flex flex-col items-center justify-center text-center">
         <img className="rounded-full" src={imageSrc} alt={altText} />
 

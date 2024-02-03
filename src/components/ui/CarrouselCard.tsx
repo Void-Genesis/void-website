@@ -1,14 +1,12 @@
 export default function CarrouselCard() {
   return (
-    <div className="flex flex-col bg-void-grey-300 rounded border border-void-grey-800 w-[283px] h-[481px] min-w-[283px]">
-      <div className="bg-void-primary-black w-full h-[311px] rounded"></div>
-
-      <div className="text-center px-[10px] pt-6 pb-7">
-        <h1 className="font-black text-base">Desenvolvimento personalizado</h1>
-        <p className="text-sm font-normal mt-3">
+    <div className="hover-light-effect hover:border-void-orange transition-all duration-300 lg:flex lg:items-end border lg:min-w-[376px] lg:min-h-[481px] bg-[url('/image-custom-development.png')] bg-no-repeat bg-cover rounded border-void-grey-900 hover:cursor-pointer group">
+      <div className="test-animation-css w-full lg:px-5 lg:py-6 lg:text-xl lg:font-black bg-void-grey-300 border-transparent rounded-bl rounded-br">
+        <span>Desenvolvimento personalizado</span>
+        <p className="lg:font-normal lg:text-base lg:mt-3 group-hover:block lg:opacity-0 group-hover:opacity-100 ">
           Soluções que não se encontram na prateleira. Criamos softwares sob
           medida que se encaixam perfeitamente nas necessidades e objetivos do
-          seu negócio, impulsionando a eficiência e a inovação
+          seu negócio, impulsionando a eficiência e a inovação.
         </p>
       </div>
     </div>

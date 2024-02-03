@@ -3,9 +3,9 @@ import PrimaryButton from "../ui/PrimaryButton";
 
 export default function SolutionsSection() {
   return (
-    <div className="border-t border-void-grey-800 bg-void-grey-200 pt-12 pb-[132px] lg:h-full lg:px-40 lg:py-32">
-      <div className="flex flex-col lg:grid lg:grid-cols-12 px-40 py-44 lg:px-0 lg:py-0">
-        <div className="flex flex-col gap-20 lg:flex-row lg:col-start-1 lg:col-end-7">
+    <div className="border-t border-void-grey-800 bg-void-grey-200 pb-[132px] lg:h-full px-4 py-12 lg:px-40 lg:py-32">
+      <div className="grid grid-cols-4 lg:grid lg:grid-cols-12 lg:px-0 lg:py-0">
+        <div className="col-span-4 gap-20 lg:flex-row lg:col-start-1 lg:col-end-7">
           <div>
             <h1 className="text-[42px] font-extrabold leading-[120%] tracking-[1px] font-sora">
               Soluções Sob Medida para Seu Sucesso
@@ -19,37 +19,22 @@ export default function SolutionsSection() {
           </div>
         </div>
 
-        <div className="relative w-full lg:col-start-8 lg:col-end-13">
+        <div className="relative w-full col-span-4 lg:col-start-8 lg:col-end-13">
           <img
             src="/logo-void-white.svg"
             alt="Void Genesis"
             className="hidden absolute right-0 top-0 h-8 lg:flex"
           />
-          <div className="absolute bottom-0 left-0 right-0">
+          <div className="lg:absolute lg:bottom-0 lg:left-0 lg:right-0 pt-6">
             <PrimaryButton text="Falar com consultor no WhatsApp" />
           </div>
         </div>
 
-        <div className="mt-11 lg:col-start-1 lg:col-end-13">
+        <div className="mt-11 col-span-4 lg:col-start-1 lg:col-end-13">
           <div
             id="cards"
             className="flex flex-row gap-x-4 mb-6 lg:overflow-x-auto lg:flex-nowrap no-horizontal-scroll lg:overflow-y-hidden"
           >
-            <CarrouselCard />
-            <CarrouselCard />
-            <CarrouselCard />
-            <CarrouselCard />
-            <CarrouselCard />
-            <CarrouselCard />
-            <CarrouselCard />
-            <CarrouselCard />
-            <CarrouselCard />
-            <CarrouselCard />
-            <CarrouselCard />
-            <CarrouselCard />
-            <CarrouselCard />
-            <CarrouselCard />
-            <CarrouselCard />
             <CarrouselCard />
           </div>
 

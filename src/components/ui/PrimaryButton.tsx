@@ -6,7 +6,7 @@ export default function PrimaryButton({ text }: { text: string }) {
     >
       <div className="text-sm font-semibold pr-2 lg:text-lg">{text}</div>
 
-      <div className="rounded-md items-center justify-center h-6 lg:h-8">
+      <div className="rounded-md items-center justify-center h-8 lg:h-8">
         <svg
           width="32"
           height="32"

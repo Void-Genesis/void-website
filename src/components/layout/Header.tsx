@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <>
-      <nav className="flex flex-row justify-between bg-[rgba(19,20,24,0.88)] transition-all duration-300 hover:bg-[#131418] backdrop-filter backdrop-blur p-6 border-b-[1px] border-void-grey-400 lg:mx-96 lg:rounded-[4px] lg:border lg:border-void-grey-400 lg:py-0 lg:px-6 lg:mt-6 lg:fixed lg:top-0 lg:left-0 lg:right-0 lg:z-50 xl:max-w-[540px] xl:mx-auto">
+      <nav className="px-4 flex flex-row justify-between bg-[rgba(19,20,24,0.88)] transition-all duration-300 hover:bg-[#131418] backdrop-filter backdrop-blur p-6 border-b-[1px] border-void-grey-400 lg:mx-96 lg:rounded-[4px] lg:border lg:border-void-grey-400 lg:py-0 lg:px-6 lg:mt-6 lg:fixed lg:top-0 lg:left-0 lg:right-0 lg:z-50 xl:max-w-[540px] xl:mx-auto">
         <div className="flex flex-row items-center justify-center gap-[18px] lg:pr-2">
           <Link href="/">
             <img

@@ -87,7 +87,7 @@ nav::before {
 
 /* Hover Effects */
 .hover-light-effect:hover {
-  box-shadow: 0px 0px 12px -8px rgba(246, 128, 38, 1);
+  box-shadow: 0px 0px 12px -8px theme("colors.void-orange");
 }
 
 /* Scrollbar Styles */
@@ -99,27 +99,27 @@ nav::before {
 
 /* Scrollbar track */
 ::-webkit-scrollbar-track {
-  background: #0c0c0f;
+  background: theme("colors.void-primary-black");
   cursor: pointer;
 }
 
 /* Scrollbar handle */
 ::-webkit-scrollbar-thumb {
-  background: #202229;
+  background: theme("colors.void-grey-300");
   border-radius: 4px;
   cursor: pointer;
 }
 
 /* Scrollbar handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #0e45eb;
+  background: theme("colors.void-blue");
   cursor: pointer;
 }
 
 /* Firefox scrollbar styling */
 * {
   scrollbar-width: 8px;
-  scrollbar-color: #202229 #0c0c0f;
+  scrollbar-color: theme("colors.void-grey-300") theme("colors.void-primary-black");
 }
 
 /* Transitions */
@@ -127,12 +127,6 @@ nav::before {
   transition:
     border-bottom 0.2s ease-in-out,
     color 0.2s ease-in-out;
-}
-
-/* Link Effects */
-/* Base setup for link light effect (currently commented out) */
-.link-light-effect {
-  /* Initial setup commented */
 }
 
 /* Hover effect for links */
@@ -168,7 +162,7 @@ nav::before {
 
 /* SVG Button Hover Effects */
 #primary-button:hover #background {
-  fill: #f0f4ff;
+  fill: theme("colors.void-soft-white");
 }
 
 #primary-button {
@@ -185,18 +179,18 @@ nav::before {
 }
 
 #primary-button:hover #down {
-  stroke: #0c0c0f;
+  stroke: theme("colors.void-primary-black");
   transition: transform 0.5s ease;
 }
 
 #primary-button:hover #up {
-  stroke: #f0f4ff;
+  stroke: theme("colors.void-soft-white");
   transition: transform 0.5s ease;
 }
 
 /* SVG Styles */
 svg #background {
-  fill: #0c0c0f;
+  fill: theme("colors.void-primary-black");
   transition: fill 0.5s ease-in-out;
 }
 
@@ -206,7 +200,174 @@ svg #up {
 }
 
 svg #up {
-  stroke: #f0f4ff;
+  stroke: theme("colors.void-soft-white");
   transform: translate(-21px, 21px);
   z-index: 50;
+}
+
+.svg-container:hover svg path#arrow-right,
+.svg-container:hover svg path#arrow-left {
+  stroke: theme("colors.void-blue");
+}
+
+.svg-container svg path#arrow-right,
+.svg-container svg path#arrow-left {
+  transition: stroke 300ms ease-in;
+}
+
+.svg-container:hover svg {
+  fill: theme("colors.void-graphite");
+}
+
+.svg-container:hover svg {
+  transition: fill 300ms ease-in;
+}
+
+.group:hover .child-visible-on-hover {
+  opacity: 1;
+}
+
+.group .child-visible-on-hover {
+  transition: opacity 300ms ease-in;
+}
+
+.group .height-animation {
+  height: 0;
+  transition: height 0.3s ease-in-out;
+}
+
+.group:hover .height-animation {
+  height: 27px;
+}
+
+.hover-effect:hover .bg-void-blue,
+.hover-effect:hover .bg-void-orange {
+  top: 0;
+}
+
+.hover-effect:hover svg path:not(#up) {
+  fill: theme("colors.void-blue");
+}
+
+.hover-effect svg path {
+  transition: fill 0.3s ease-in-out;
+}
+
+.hover-effect .bg-void-blue,
+.hover-effect .bg-void-orange {
+  top: 100%;
+  transition: top 0.3s ease-in-out;
+}
+
+#void-down {
+  left: -330px;
+  bottom: -333px;
+  transition: left 0.3s ease-in-out, bottom 0.3s ease-in-out;
+}
+
+.hover-effect:hover #void-down {
+  left: -225px;
+  bottom: -220px;
+}
+
+#void-up {
+  right: -330px;
+  top: -333px;
+  transition: right 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.hover-effect:hover #void-up {
+  right: -225px;
+  top: -220px;
+}
+
+@keyframes floatingAnimation {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(0) scale(1) rotate(90deg);
+  }
+
+  50% {
+    transform: translateY(0) scale(1) rotate(180deg);
+  }
+
+  75% {
+    transform: translateY(0) scale(1) rotate(270deg);
+  }
+
+  100% {
+    transform: translateY(0) scale(1) rotate(360deg);
+  }
+}
+
+
+.floating {
+  animation: floatingAnimation 6s ease-in-out infinite;
+}
+
+@keyframes floatingCubeTopRight {
+
+  0%,
+  100% {
+    transform: translateX(0) scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(-10px) scale(1.1) rotate(0deg);
+  }
+}
+
+.floating-cube #cube-top-right {
+  animation: floatingCubeTopRight 6s ease-in-out infinite;
+}
+
+@keyframes floatingCubeTopLeft {
+
+  0%,
+  100% {
+    transform: translateX(0) scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(0px) scale(1.2) rotate(10deg);
+  }
+}
+
+.floating-cube #cube-top-left {
+  animation: floatingCubeTopLeft 6s ease-in-out infinite;
+}
+
+@keyframes floatingCubeBottomLeft {
+
+  0%,
+  100% {
+    transform: translateX(0) scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) scale(1.2) rotate(0deg);
+  }
+}
+
+.floating-cube #cube-bottom-left {
+  animation: floatingCubeBottomLeft 6s ease-in-out infinite;
+}
+
+@keyframes floatingCubeBottomRight {
+
+  0%,
+  100% {
+    transform: translateX(0) scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(-10px) translateY(-10px) scale(1.15) rotate(0deg);
+  }
+}
+
+.floating-cube #cube-bottom-right {
+  animation: floatingCubeBottomRight 6s ease-in-out infinite;
 }

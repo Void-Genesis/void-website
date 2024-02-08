@@ -3,24 +3,24 @@ import PrimaryButton from "../ui/PrimaryButton";
 export default function CallToActionSection() {
   return (
     <>
-      <div className="pt-11 px-4 pb-32 lg:px-[160px] lg:py-[132px]">
-        <div className="hover-light-effect flex flex-col relative border-void-grey-900 lg:hover:border-void-orange transition-all duration-500 border rounded py-[152px] px-4 text-center bg-custom-radial lg:px-72 lg:py-28 bg-custom-radial-shadow">
-          <img
-            className="absolute w-[117.29px] h-[127px] top-0 left-0"
-            src="/cube-top-left.svg"
-            alt="Void Genesis"
-          />
-          <img
+      <div className="pt-11 px-4 pb-32 lg:px-[160px] lg:py-[132px] bg-void-primary-black">
+        <div className="floating-cube hover-light-effect flex flex-col relative border-void-grey-900 lg:hover:border-void-orange transition-all duration-500 border rounded py-[152px] px-4 text-center bg-radial bg-no-repeat bg-contain lg:px-72 lg:py-28">
+          <img id="cube-top-right"
             className="absolute top-[-50px] right-[-35px] lg:right-[0px]"
             src="/cube-top-right.svg"
             alt="Void Genesis"
           />
-          <img
+          <img id="cube-top-left"
+            className="absolute w-[117.29px] h-[127px] top-0 left-0"
+            src="/cube-top-left.svg"
+            alt="Void Genesis"
+          />
+          <img id="cube-bottom-left"
             className="absolute bottom-0 left-0"
             src="/cube-bottom-left.svg"
             alt="Void Genesis"
           />
-          <img
+          <img id="cube-bottom-right"
             className="absolute bottom-0 right-0"
             src="/cube-bottom-right.svg"
             alt="Void Genesis"

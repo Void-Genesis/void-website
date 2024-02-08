@@ -14,10 +14,10 @@ export default function Footer() {
           <div className="border-t-[1px] border-void-grey-700 lg:hidden" />
 
           <div className="flex flex-col justify-center items-center gap-8 text-void-white-900 font-heebo text-lg font-normal leading-[120%] tracking-[0.18px] lg:border-void-grey-700 lg:border-l-[1px] lg:border-r-[1px] lg:px-16 lg:py-4 xl:px-32">
-            <a href="">Voltar para o topo</a>
-            <a href="">Sobre nós</a>
-            <a href="">Nossas soluções</a>
-            <a href="">Contato</a>
+            <a className="hover:text-void-white transition-all duration-500" href="">Voltar para o topo</a>
+            <a className="hover:text-void-white transition-all duration-500" href="">Sobre nós</a>
+            <a className="hover:text-void-white transition-all duration-500" href="">Nossas soluções</a>
+            <a className="hover:text-void-white transition-all duration-500" href="">Contato</a>
           </div>
 
           <div className="border-t-[1px] border-void-grey-700 lg:hidden" />

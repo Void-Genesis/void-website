@@ -4,7 +4,7 @@ export default function CallToActionSection() {
   return (
     <>
       <div className="pt-11 px-4 pb-32 lg:px-[160px] lg:py-[132px] bg-void-primary-black">
-        <div className="floating-cube hover-light-effect flex flex-col relative border-void-grey-900 lg:hover:border-void-orange transition-all duration-500 border rounded py-[152px] px-4 text-center bg-radial bg-no-repeat bg-contain lg:px-72 lg:py-28">
+        <div className="floating-cube hover-light-effect flex flex-col relative border-void-grey-900 lg:hover:border-void-orange transition-all duration-500 border rounded py-[152px] px-4 text-center bg-radial bg-no-repeat bg-cover lg:px-72 lg:py-28">
           <img id="cube-top-right"
             className="absolute top-[-50px] right-[-35px] lg:right-[0px]"
             src="/cube-top-right.svg"

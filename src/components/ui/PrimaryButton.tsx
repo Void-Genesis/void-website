@@ -16,7 +16,7 @@ export default function PrimaryButton({ text }: { text: string }) {
         >
           <rect width="32" height="32" />
           <g id="button">
-            <g clip-path="url(#clip0_601_17317)">
+            <g clipPath="url(#clip0_601_17317)">
               <path
                 id="background"
                 d="M0 8C0 3.58172 3.58172 0 8 0H24C28.4183 0 32 3.58172 32 8V24C32 28.4183 28.4183 32 24 32H8C3.58172 32 0 28.4183 0 24V8Z"
@@ -24,16 +24,16 @@ export default function PrimaryButton({ text }: { text: string }) {
               <path
                 id="down"
                 d="M-10 42L0 32M0 32H-10M0 32V42"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 id="up"
                 d="M32 0L42 -10M42 -10H32M42 -10V0"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </g>
           </g>

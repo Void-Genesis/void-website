@@ -13,9 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
+    <html>
       <body>
-        <Header />
         <div className="relative overflow-hidden">{children}</div>
         <Footer />
       </body>

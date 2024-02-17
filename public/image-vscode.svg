@@ -1,7 +1,7 @@
 <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.1">
 <path d="M0.368058 12.4444C0.164785 11.6467 0.6467 10.8352 1.44444 10.6319L38.286 1.24436C39.0838 1.04108 39.8953 1.523 40.0985 2.32074L49.4861 39.1623C49.6894 39.9601 49.2075 40.7716 48.4097 40.9748L11.5681 50.3624C10.7704 50.5657 9.95892 50.0838 9.75564 49.286L0.368058 12.4444Z" fill="url(#paint0_linear_554_22232)"/>
-<g clip-path="url(#clip0_554_22232)">
+<g clipPath="url(#clip0_554_22232)">
 <mask id="mask0_554_22232" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="11" width="30" height="30">
 <path d="M10.335 17.1392L33.5913 11.2112L39.5193 34.4676L16.2629 40.3955L10.335 17.1392Z" fill="white"/>
 </mask>

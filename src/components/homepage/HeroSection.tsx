@@ -7,10 +7,7 @@ export default function HeroSection() {
     <>
       <div className="absolute z-[-50] right-[-193px] top-[239px] w-[319px] h-[319px] rounded-full bg-void-white bg-opacity-30 blur-[235px] lg:hidden" />
 
-
-
       <div className="relative px-4 pt-[46px] py-[132px] lg:py-[132px] lg:px-[160px] lg:grid lg:grid-cols-12 grid grid-cols-4">
-
         <img
           className="hidden lg:absolute lg:flex top-0 right-0"
           src="/image-background.png"
@@ -19,7 +16,7 @@ export default function HeroSection() {
 
         <div className="col-span-4 lg:col-span-6 lg:row-start-1 lg:pt-6">
           <h1 className="text-[28px] lg:text-[50px] lg:leading-[110%] lg:tracking-[1px]">
-            Tecendo um futuro onde a tecnologia serve à humanidade.
+            A tecnologia a serviço do seu negócio!
           </h1>
           <h2 className="text-base lg:text-2xl pt-6 mb-11 lg:mb-0">
             Potencialize sua empresa com soluções profissionais nas áreas da

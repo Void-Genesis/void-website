@@ -16,7 +16,7 @@ export default function RootLayout({
     <html>
       <body>
         <div className="relative overflow-hidden">{children}</div>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

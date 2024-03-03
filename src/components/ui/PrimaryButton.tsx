@@ -1,6 +1,12 @@
 export default function PrimaryButton({ text }: { text: string }) {
   return (
     <div
+      onClick={() => {
+        window.open(
+          "https://api.whatsapp.com/send?phone=5541999008755",
+          "_blank",
+        );
+      }}
       id="primary-button"
       className="w-full flex items-center justify-center bg-void-blue hover:bg-[#1843C2] transition-colors duration-500 rounded-[3px] py-5 px-8 cursor-pointer transform hover:scale-[1.01]"
     >

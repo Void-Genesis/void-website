@@ -81,19 +81,11 @@ export default function CaseStudySection() {
           <div className="lg:w-1/2 lg:flex lg:flex-col justify-between">
             <div className="justify-center items-center">
               <div className="lg:items-center lg:justify-center lg:flex">
-                <img
-                  className=""
-                  src="/image-puzzle-full.png"
-                  alt="Void Genesis"
-                />
+                <img src="/image-puzzle-full.png" alt="Void Genesis" />
               </div>
             </div>
 
             <div className="lg:relative lg:bottom-0">
-              <p className="mt-12 font-normal font-heebo text-base text-void-white-300 mb-7 lg:text-left lg:pl-0 lg:text-xl lg:font-black lg:mt-0">
-                Com a Void Genesis, cada projeto é uma nova história de sucesso!
-              </p>
-
               <PrimaryButton text="Falar com consultor no WhatsApp" />
             </div>
           </div>

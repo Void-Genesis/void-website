@@ -5,29 +5,33 @@ export default function CallToActionSection() {
     <>
       <div className="pt-11 px-4 pb-32 lg:px-[160px] lg:py-[132px] bg-void-primary-black">
         <div className="floating-cube hover-light-effect flex flex-col relative border-void-grey-900 lg:hover:border-void-orange transition-all duration-500 border rounded py-[152px] px-4 text-center bg-radial bg-no-repeat bg-cover lg:px-72 lg:py-28">
-          <img id="cube-top-right"
+          <img
+            id="cube-top-right"
             className="absolute top-[-50px] right-[-35px] lg:right-[0px]"
             src="/cube-top-right.svg"
             alt="Void Genesis"
           />
-          <img id="cube-top-left"
+          <img
+            id="cube-top-left"
             className="absolute w-[117.29px] h-[127px] top-0 left-0"
             src="/cube-top-left.svg"
             alt="Void Genesis"
           />
-          <img id="cube-bottom-left"
+          <img
+            id="cube-bottom-left"
             className="absolute bottom-0 left-0"
             src="/cube-bottom-left.svg"
             alt="Void Genesis"
           />
-          <img id="cube-bottom-right"
+          <img
+            id="cube-bottom-right"
             className="absolute bottom-0 right-0"
             src="/cube-bottom-right.svg"
             alt="Void Genesis"
           />
 
           <h1 className="font-sora font-extrabold text-2xl leading-[120%] tracking-[1px] pt-6 pb-[24px] px-8 lg:text-5xl lg:leading-[120%]">
-            Sua jornada de sucesso começa aqui!
+            O sucesso do seu produto começa aqui!
           </h1>
           <p className="text-void-white-300 font-heebo text-base font-normal leading-[120%] tracking-[0.16px] px-8 lg:text-lg pb-[18px]">
             Atendimento personalizado pelo WhatsApp! Nossa equipe de

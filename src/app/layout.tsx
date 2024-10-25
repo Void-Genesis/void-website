@@ -4,7 +4,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Void Genesis",
+  title: "Void",
+  description: "Software development",
 };
 
 export default function RootLayout({
@@ -16,7 +17,6 @@ export default function RootLayout({
     <html>
       <body>
         <div className="relative overflow-hidden">{children}</div>
-        {/* <Footer /> */}
       </body>
     </html>
   );

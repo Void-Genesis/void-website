@@ -13,8 +13,13 @@ export default function Footer() {
 
           <div className="hidden border-t-[1px] border-void-grey-700 lg:hidden" />
 
-          <div className="hidden flex flex-col justify-center items-center gap-8 text-void-white-900 font-heebo text-lg font-normal leading-[120%] tracking-[0.18px] lg:border-void-grey-700 lg:border-l-[1px] lg:border-r-[1px] lg:px-16 lg:py-4 xl:px-32">
-            <a className="hover:text-void-white transition-all duration-500" href="">Voltar para o topo</a>
+          <div className="flex flex-col justify-center items-center gap-8 text-void-white-900 font-heebo text-lg font-normal leading-[120%] tracking-[0.18px] lg:border-void-grey-700 lg:border-l-[1px] lg:border-r-[1px] lg:px-16 lg:py-4 xl:px-32">
+            <a
+              className="hover:text-void-white transition-all duration-500"
+              href=""
+            >
+              Voltar para o topo
+            </a>
           </div>
 
           <div className="hidden border-t-[1px] border-void-grey-700 lg:hidden" />
@@ -26,7 +31,6 @@ export default function Footer() {
 
             <PrimaryButton text="Fale conosco no WhatsApp" />
           </div>
-
         </div>
       </div>
     </div>

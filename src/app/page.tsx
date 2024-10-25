@@ -49,7 +49,7 @@ export default function Home() {
       ) : (
         <>
           <HeroSection />
-          {/* <SolutionsSection /> */}
+          <SolutionsSection />
           <CaseStudySection />
           <TestimonialSection />
           <TeamSection />
